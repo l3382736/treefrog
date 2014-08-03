@@ -1,0 +1,53 @@
+2014-08-03 18:24:46  [20668] [BEGIN] [databaseId:0]
+2014-08-03 18:24:46  [20668] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog
+2014-08-03 18:24:46  [20668] [COMMIT] [databaseId:0]
+2014-08-03 18:24:54  [20669] [BEGIN] [databaseId:0]
+2014-08-03 18:24:54  [20669] INSERT INTO blog (`title`, `body`, `created_at`, `updated_at`, `lock_revision`) VALUES ('eduardo test ', 'hoho', '2014-08-03T18:24:54', '2014-08-03T18:24:54', 1)
+2014-08-03 18:24:55  [20669] [COMMIT] [databaseId:0]
+2014-08-03 18:24:55  [20669] [BEGIN] [databaseId:0]
+2014-08-03 18:24:55  [20669] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog WHERE id=1 LIMIT 1
+2014-08-03 18:24:55  [20669] [COMMIT] [databaseId:0]
+2014-08-03 18:24:58  [20669] [BEGIN] [databaseId:0]
+2014-08-03 18:24:58  [20669] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog
+2014-08-03 18:24:58  [20669] [COMMIT] [databaseId:0]
+2014-08-03 18:31:17  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:17  [20807] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog
+2014-08-03 18:31:17  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:31:19  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:19  [20807] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog WHERE id=1 LIMIT 1
+2014-08-03 18:31:19  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:31:22  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:22  [20807] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog
+2014-08-03 18:31:22  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:31:25  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:25  [20807] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog WHERE id=1 LIMIT 1
+2014-08-03 18:31:25  [20807] DELETE FROM blog WHERE lock_revision=1 AND id=1
+2014-08-03 18:31:25  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:31:25  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:25  [20807] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog
+2014-08-03 18:31:25  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:31:31  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:31  [20807] INSERT INTO blog (`title`, `body`, `created_at`, `updated_at`, `lock_revision`) VALUES ('eduardo test ', 'hoho', '2014-08-03T18:31:31', '2014-08-03T18:31:31', 1)
+2014-08-03 18:31:31  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:31:31  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:31  [20807] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog WHERE id=2 LIMIT 1
+2014-08-03 18:31:31  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:31:35  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:35  [20807] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog
+2014-08-03 18:31:35  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:31:37  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:37  [20807] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog WHERE id=2 LIMIT 1
+2014-08-03 18:31:37  [20807] DELETE FROM blog WHERE lock_revision=1 AND id=2
+2014-08-03 18:31:38  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:31:38  [20807] [BEGIN] [databaseId:0]
+2014-08-03 18:31:38  [20807] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog
+2014-08-03 18:31:38  [20807] [COMMIT] [databaseId:0]
+2014-08-03 18:42:38  [21094] [BEGIN] [databaseId:0]
+2014-08-03 18:42:38  [21094] INSERT INTO blog (`title`, `body`, `created_at`, `updated_at`, `lock_revision`) VALUES ('eduardo test ', 'hoho', '2014-08-03T18:42:38', '2014-08-03T18:42:38', 1)
+2014-08-03 18:42:38  [21094] [COMMIT] [databaseId:0]
+2014-08-03 18:42:38  [21094] [BEGIN] [databaseId:0]
+2014-08-03 18:42:38  [21094] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog WHERE id=3 LIMIT 1
+2014-08-03 18:42:38  [21094] [COMMIT] [databaseId:0]
+2014-08-03 18:42:40  [21094] [BEGIN] [databaseId:0]
+2014-08-03 18:42:40  [21094] SELECT `id`, `title`, `body`, `created_at`, `updated_at`, `lock_revision` FROM blog
+2014-08-03 18:42:40  [21094] [COMMIT] [databaseId:0]

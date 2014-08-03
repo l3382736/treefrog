@@ -1,0 +1,58 @@
+Treefrog
+
+INSTALL
+$ sudo apt-get install -y qt4-qmake libqt4-dev libqt4-sql-mysql libqt4-sql-psql g++
+$ ./configure --prefix=/home/l3382736/treefrog/
+$ cd src
+$ make
+$ sudo make install
+$ cd ../tools
+$ make
+$ sudo make install
+
+
+CREATE APPLICATION
+add to ~/.profile
+	PATH=$PATH:/home/l3382736/treefrog/bin
+	export LD_LIBRARY_PATH=/home/l3382736/treefrog/lib
+
+$ tspawn new blogapp
+
+$ sudo apt-get remove --purge mysql-server
+$ sudo apt-get install mysql-server
+
+$ mysql -u root -p
+mysql> CREATE DATABASE blogdb DEFAULT CHARACTER SET utf8;
+mysql> USE blogdb;
+mysql> CREATE TABLE blog (id INTEGER AUTO_INCREMENT PRIMARY KEY, 
+	title VARCHAR(20), body VARCHAR(200), created_at TIMESTAMP DEFAULT 0, 
+	updated_at TIMESTAMP DEFAULT 0, lock_revision INTEGER) DEFAULT CHARSET=utf8;
+mysql> DESC blog;
+mysql> quit
+
+MODIFY config/database.ini
+[dev]
+DriverType=QMYSQL
+DatabaseName=blogdb
+HostName=
+Port=
+UserName=root
+Password=******
+ConnectOptions=
+
+CHECKACCESS TO DB
+$ cd blogapp 
+$ tspawn --show-tables
+
+AUTOMATIC GENERATION OF CODE FROM TABLE
+$ cd blogapp
+$ tspawn scaffold blog
+
+BUILD CODE
+$ qmake -r "CONFIG+=debug"
+$ cd /home/l3382736/treefrog/lib
+$ sudo cp libtreefrog.so /usr/lib/x86_64-linux-gnu/
+$ treefrog -e dev
+
+TEST
+http://localhost:8800/Blog/index
